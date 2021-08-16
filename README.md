@@ -6,6 +6,8 @@ This package extends `@dimensionalpocket/development-js` with Webpack dependenci
 * `babel-loader` - along with `@babel/preset-env`
 * `style-loader` - along with `css-loader` and `sass-loader`
 * `sass` - Dart Sass
+* `html-webpack-plugin`
+* `webpack-dev-server`
 
 ## Installation
 
@@ -19,11 +21,13 @@ Since this includes `@dimensionalpocket/development-js` as well, you don't need 
 
 ## Webpack Configuration
 
-In your `webpack.config.js`, you can import the default rules from this library:
+In your `webpack.config.js`, you can import the default rules and plugins from this library:
 
 ```javascript
 var defaultBabelRule = require('@dimensionalpocket/development-webpack/rules/babel')
 var defaultStyleRule = require('@dimensionalpocket/development-webpack/rules/style')
+
+var defaultPlugins = require('@dimensionalpocket/development-webpack/plugins')
 
 // If you want to modify the defaults, create a copy:
 var babelRule = Object.assign({ exclude: /node_modules/ }, defaultBabelRule)
@@ -36,8 +40,11 @@ module.exports = {
       defaultStyleRule,
       // ...
     ],
+  },
+  plugins: [
+    ...defaultPlugins,
     // ...
-  }
+  ]
 }
 ```
 
@@ -45,6 +52,7 @@ You can also import all rules at once if you don't need to modify them:
 
 ```javascript
 var rules = require('@dimensionalpocket/development-webpack/rules')
+var plugins = require('@dimensionalpocket/development-webpack/plugins')
 
 module.exports = {
   module: {
@@ -52,7 +60,11 @@ module.exports = {
       ...rules,
       // ... additional rules here
     ],
-  }
+  },
+  plugins: [
+    ...plugins,
+    // ... additional plugins here
+  ]
 }
 ```
 
@@ -61,3 +73,5 @@ And finally, if you just don't want to change any of the defaults or add new set
 ```javascript
 module.exports = require('@dimensionalpocket/development-webpack')
 ```
+
+The above will import all default rules and plugins.
