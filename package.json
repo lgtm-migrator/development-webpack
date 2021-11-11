@@ -29,7 +29,7 @@
     "sass-loader": "12.3.0",
     "style-loader": "3.3.1",
     "webpack": "5.62.1",
-    "webpack-dev-server": "3.11.2"
+    "webpack-dev-server": "3.11.3"
   },
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
