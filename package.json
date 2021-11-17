@@ -53,6 +53,6 @@
     "node": ">= 14.17.1"
   },
   "devDependencies": {
-    "release-it": "14.11.6"
+    "release-it": "14.11.7"
   }
 }
