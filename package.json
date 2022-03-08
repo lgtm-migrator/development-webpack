@@ -1,13 +1,12 @@
 {
   "name": "@dimensionalpocket/development-webpack",
   "version": "0.1.0",
-  "description": "",
+  "description": "Webpack bundle for Node projects",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "test:ci": "NODE_ENV=test mocha",
     "lint": "standardx --fix --verbose",
-    "release": "release-it --config ./node_modules/@dimensionalpocket/development/release-it/config.js"
+    "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/defaults.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,6 @@
   "homepage": "https://github.com/dimensionalpocket/development-webpack#readme",
   "dependencies": {
     "@babel/preset-env": "7.16.11",
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.4.2",
     "babel-loader": "8.2.3",
     "css-loader": "6.7.0",
     "html-webpack-plugin": "5.5.0",
@@ -29,7 +27,14 @@
     "sass-loader": "12.6.0",
     "style-loader": "3.3.1",
     "webpack": "5.70.0",
-    "webpack-dev-server": "3.11.3"
+    "webpack-dev-server": "4.7.4"
+  },
+  "peerDependencies": {
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#semver:0.x"
+  },
+  "devDependencies": {
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.5.2",
+    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4"
   },
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
@@ -43,7 +48,7 @@
     "colors": true
   },
   "c8": {
-    "all": true,
+    "extends": "./node_modules/@dimensionalpocket/development/c8/default.json",
     "include": [
       "index.js",
       "rules"
@@ -51,8 +56,5 @@
   },
   "engines": {
     "node": ">= 14.17.1"
-  },
-  "devDependencies": {
-    "release-it": "14.12.5"
   }
 }

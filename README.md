@@ -1,6 +1,8 @@
 # @dimensionalpocket/development-webpack
 
-This package extends `@dimensionalpocket/development-js` with Webpack dependencies and configuration defaults:
+[![build](https://github.com/dimensionalpocket/development-webpack/actions/workflows/node.js.yml/badge.svg)](https://github.com/dimensionalpocket/development-webpack/actions/workflows/node.js.yml) [![Total alerts](https://img.shields.io/lgtm/alerts/g/dimensionalpocket/development-webpack.svg)](https://lgtm.com/projects/g/dimensionalpocket/development-webpack/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dimensionalpocket/development-webpack.svg)](https://lgtm.com/projects/g/dimensionalpocket/development-webpack/context:javascript)
+
+This bundle complements [`@dimensionalpocket/development-js`](https://github.com/dimensionalpocket/development-js) with Webpack dependencies and configuration defaults:
 
 * `webpack`
 * `babel-loader` - along with `@babel/preset-env`
@@ -8,16 +10,6 @@ This package extends `@dimensionalpocket/development-js` with Webpack dependenci
 * `sass` - Dart Sass
 * `html-webpack-plugin`
 * `webpack-dev-server`
-
-## Installation
-
-Install the package directly from GitHub (X.Y.Z == release tag):
-
-```shell
-npm i --save-dev -E github:dimensionalpocket/development-webpack#X.Y.Z
-```
-
-Since this includes `@dimensionalpocket/development-js` as well, you don't need to install it in your project to use its features. (In other words, you shouldn't install both.)
 
 ## Webpack Configuration
 
@@ -75,3 +67,17 @@ module.exports = require('@dimensionalpocket/development-webpack')
 ```
 
 The above will import all default rules and plugins.
+
+## Installation
+
+Install the package directly from GitHub (X.Y.Z == release tag):
+
+```shell
+npm i --save-dev -E github:dimensionalpocket/development-webpack#X.Y.Z
+```
+
+Note: [`@dimensionalpocket/development-js`](https://github.com/dimensionalpocket/development-js) is a __peer dependency__ and needs to be installed alongside this package.
+
+## License
+
+MIT
