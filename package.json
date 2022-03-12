@@ -33,7 +33,7 @@
     "@dimensionalpocket/development": "github:dimensionalpocket/development-js#semver:0.x"
   },
   "devDependencies": {
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.5.2",
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.5.3",
     "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4"
   },
   "babel": {
