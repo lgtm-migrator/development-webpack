@@ -4,7 +4,7 @@
 
 This bundle complements [`@dimensionalpocket/development-js`](https://github.com/dimensionalpocket/development-js) with Webpack dependencies and configuration defaults:
 
-* `webpack`
+* `webpack` - along with `webpack-cli`
 * `babel-loader` - along with `@babel/preset-env`
 * `style-loader` - along with `css-loader` and `sass-loader`
 * `sass` - Dart Sass
