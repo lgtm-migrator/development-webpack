@@ -27,7 +27,7 @@
     "sass-loader": "12.6.0",
     "style-loader": "3.3.1",
     "webpack": "5.74.0",
-    "webpack-dev-server": "4.11.0"
+    "webpack-dev-server": "4.11.1"
   },
   "peerDependencies": {
     "@dimensionalpocket/development": "github:dimensionalpocket/development-js#semver:0.x"
